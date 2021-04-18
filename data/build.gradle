@@ -40,5 +40,4 @@ dependencies {
     kapt dependencies.roomCompiler
 
     implementation dependencies.koin
-    testImplementation dependencies.testImplementation
 }

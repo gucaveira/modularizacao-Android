@@ -1,4 +1,4 @@
-package com.gustavo.data.remote.source
+package com.gustavo.data
 
 import com.gustavo.domain.entities.AndroidJob
 import io.reactivex.Single

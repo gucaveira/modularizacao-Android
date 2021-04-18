@@ -1,4 +1,4 @@
-package com.gustavo.data.remote.source
+package com.gustavo.data
 
 import com.gustavo.data.remote.api.ServerApi
 import com.gustavo.data.remote.mapper.AndroidJobMapper

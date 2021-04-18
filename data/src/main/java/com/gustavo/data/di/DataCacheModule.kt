@@ -4,7 +4,7 @@ import com.gustavo.data.local.database.JobsDataBase
 import com.gustavo.data.local.source.JobsCacheDataSource
 import com.gustavo.data.local.source.JobsCacheSourceImpl
 import org.koin.android.ext.koin.androidContext
-import org.koin.dsl.module.module
+import org.koin.dsl.module
 
 val cacheDataModule = module {
     single { JobsDataBase.createDataBase(androidContext()) }

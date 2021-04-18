@@ -1,4 +1,4 @@
-package com.gustavo.data.remote.source
+package com.gustavo.data
 
 import com.gustavo.data.local.source.JobsCacheDataSource
 import com.gustavo.domain.entities.AndroidJob

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">modularizacao Android</string>
+    <string name="show_list">Ver lista de Android Jobs</string>
+    <string name="out">Sair</string>
+    <string name="loading">Carregando…</string>
+    <string name="error_generic">Ops! tivemos um problema, volte mais tarde</string>
+    <string name="try_again">Tente novamente</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
