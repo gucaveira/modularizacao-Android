@@ -7,7 +7,9 @@ import androidx.lifecycle.Observer
 import com.gustavo.modularizacaoandroid.R
 import com.gustavo.modularizacaoandroid.databinding.ActivityMainBinding
 import com.gustavo.modularizacaoandroid.features.list.AndroidJobsListActivity
+import com.gustavo.modularizacaoandroid.features.main.viewmodel.MainAction
 import com.gustavo.modularizacaoandroid.features.main.viewmodel.MainViewModel
+import com.gustavo.modularizacaoandroid.util.exhaustive
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
@@ -26,19 +28,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        viewModel.showAndroidJobsLiveData.observe(this, Observer { isShow ->
-            when (isShow) {
-                true -> {
-                    startActivity(AndroidJobsListActivity.launchIntent(this))
-                }
-            }
-        })
-
-        viewModel.outAppLiveData.observe(this, Observer { isOut ->
-            when (isOut) {
-                true -> {
-                    finish()
-                }
+        viewModel.mainActionLiveData.observe(this, Observer {
+            it.getContentIfNotHandled()?.let { mainAction ->
+                when (mainAction) {
+                    MainAction.SHOW_JOBS -> startActivity(AndroidJobsListActivity.launchIntent(this))
+                    MainAction.LEAVE_APP -> finish()
+                }.exhaustive
             }
         })
     }
